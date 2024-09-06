@@ -20,6 +20,7 @@ def main() -> None:
     parser.add_argument('-i', '--iterations', type=int,
                         help='The number of iteration of data generation.')
     args = parser.parse_args()
+    print(f"command: {args.command}")
     try:
         if args.command == 'unlock':
             print(sh.unlockUpload(args.port))

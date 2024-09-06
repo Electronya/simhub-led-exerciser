@@ -56,6 +56,7 @@ def getLedCount(dev: str) -> int:
     serial.write(pkt)
     response = serial.read_until(size=5)
     ledCountStr = response.decode()
+    print(ledCountStr)
     return int(ledCountStr)
 
 
